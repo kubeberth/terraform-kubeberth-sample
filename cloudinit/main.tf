@@ -23,6 +23,6 @@ password: ubuntu
 chpasswd: { expire: False }
 disable_root: false
 #ssh_authorized_keys:
-#- ssh-rsa  XXXXXXXXXXXXXXXXXXXXXXXXX
+#- ssh-rsa XXXXXXXXXXXXXXXXXXXXXXXXX
 EOF
 }
