@@ -2,7 +2,7 @@ terraform {
   required_providers {
     kubeberth = {
       source  = "local/kubeberth/kubeberth"
-      version = "0.8.0"
+      version = "0.8.1"
     }
   }
   required_version = "~> 1.2.0"
@@ -12,16 +12,16 @@ provider "kubeberth" {
   url = "http://api.kubeberth.k8s.arpa/api/v1alpha1/"
 }
 
-resource "kubeberth_disk" "terraform-example" {
-  name   = "terraform-example"
+resource "kubeberth_disk" "terraform-sample" {
+  name   = "terraform-sample"
   size   = "32Gi"
   source = {
-    archive = "terraform-example"
+    archive = "terraform-sample"
   }
 }
 
-resource "kubeberth_disk" "terraform-example-emptydisk" {
-  name   = "terraform-example-emptydisk"
+resource "kubeberth_disk" "terraform-sample-emptydisk" {
+  name   = "terraform-sample-emptydisk"
   size   = "16Gi"
   source = {}
 }
