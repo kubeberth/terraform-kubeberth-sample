@@ -2,7 +2,7 @@ terraform {
   required_providers {
     kubeberth = {
       source  = "local/kubeberth/kubeberth"
-      version = "0.9.0"
+      version = "0.10.0"
     }
   }
   required_version = "~> 1.2.0"
@@ -19,7 +19,7 @@ resource "kubeberth_server" "terraform-sample" {
   memory      = "2Gi"
   mac_address = "52:42:00:11:22:33"
   hostname    = "terraform-sample-server"
-  hosting     = "node-1.k8s.home.arpa"
+  #hosting     = "node-1.k8s.home.arpa"
   disk        = {
     name = "terraform-sample"
   }

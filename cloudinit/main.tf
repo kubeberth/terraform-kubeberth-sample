@@ -2,7 +2,7 @@ terraform {
   required_providers {
     kubeberth = {
       source  = "local/kubeberth/kubeberth"
-      version = "0.9.0"
+      version = "0.10.0"
     }
   }
   required_version = "~> 1.2.0"
@@ -24,5 +24,10 @@ chpasswd: { expire: False }
 disable_root: false
 #ssh_authorized_keys:
 #- ssh-rsa XXXXXXXXXXXXXXXXXXXXXXXXX
+package_update: true
+packages:
+ - nginx
+runcmd:
+  - hostname > /var/www/html/index.html
 EOF
 }
